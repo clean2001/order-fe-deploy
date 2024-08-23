@@ -43,6 +43,6 @@ jobs:
 
       # cloud front의 캐시를 지워주는 작업이다.
       - name: invalidate cloudfront caches
-        run: aws cloudfront create-invalidation -- distribution-id E3HXU75073HWML --paths "/*"
+        run: aws cloudfront create-invalidation --distribution-id E3HXU75073HWML --paths "/*"
 
 
