@@ -10,7 +10,7 @@
                     </div>
                 </v-col>
                 <v-col class="text-center">
-                    <v-btn :to="{path:'/'}" color="sid_btn2">java shop333</v-btn>
+                    <v-btn :to="{path:'/'}" color="sid_btn2">java shop444444</v-btn>
                 </v-col>
                 <v-col class="d-flex justify-end"> <!--d-flex justify-start: 전체를 우측 정렬-->
                     <v-btn v-if="isLogin" :to="{path:'/order/cart'}">장바구니({{ getTotalQuantity }})</v-btn>

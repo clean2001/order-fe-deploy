@@ -3,7 +3,7 @@ name: deploy to aws s3
 on:
   push:
     branches:
-      - main
+      - dev
 jobs:
 # workflow는 하나 이상의 작업(job)으로 구성. 여기서는 하나의 작업만을 정의
   build-and-deploy:
