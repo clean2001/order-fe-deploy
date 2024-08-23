@@ -23,6 +23,6 @@ jobs:
         # run은 직접 사용하고자 하는 명령어이다.
         run: npm install
       - name: npm build
-        working-directiory: .
+        working-directory: .
         run: npm run build
 
