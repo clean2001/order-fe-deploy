@@ -1,0 +1,28 @@
+name: deploy to aws s3
+# main 브랜치에 push 될 때 현재 스크립트 실행 트리거 발동
+on:
+  push:
+    branches:
+      - main
+jobs:
+# workflow는 하나 이상의 작업(job)으로 구성. 여기서는 하나의 작업만을 정의
+  build-and-deploy:
+    runs-on: ubuntu-latest # 우분투 최신 판에서 작업(빌드, 배포 작업 어디서 할건지 지정)
+    steps:
+    # actions는 깃헙에서 제공되는 공식 워크플로이다.
+    # checkout은 현재 repo의 main 브랜치 소스코드를 copy
+      - name: source code checkout
+        uses: actions/checkout@v2
+        # node js 세팅
+      - name: setup node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20'
+      - name: npm install
+        working-directory: .
+        # run은 직접 사용하고자 하는 명령어이다.
+        run: npm install
+      - name: npm build
+        working-directiory: .
+        run: npm run build
+
